@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} Filtered by {{ title }} {% endblock %}
+
+{% block content %}-
+<div class = "table-responsive">
+	<table class="table table-striped">
+		<tr>
+			<th>Distance</th>
+			<th>Rate</th>
+			<th>Project Size</th>
+			<th>Completion Date</th>
+		</tr>
+		{% for project in projects %}
+		<tr>
+			<td>{{ project.distance }}</td>
+			<td>{{ project.rate }}</td>
+			<td>{{ project.project_size }}</td>
+			<td>{{ project.completion_date }} </td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Index {% endblock %}
+{% block content %}
+<div class="form-group">
+	<form action="/view" method="post">
+
+		<label class="label label-primary" >SORT BY</label>
+		<br />
+		<select name="orderby" class="form-control" >
+			<option value="distance"> Distance </option>
+			<option value="rate">Rate</option>
+			<option value="project_size">Project Size</option>
+			<option value="completion_date">Completion Date</option>
+		</select>
+		<br />
+		<br />
+		<input type="submit" class="btn btn-primary btn-md">
+	</form>
+</div>
+	<br>
+	<a href="{{ url_for('add')}}" class="btn btn-primary btn-md">Update Priority</a>
+
+{% endblock %}
