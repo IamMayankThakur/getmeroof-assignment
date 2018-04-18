@@ -3,6 +3,38 @@
 {% block title %} Priority Order {% endblock %}
 
 {% block content %}
+<script type="text/javascript">
+	var distance = {{ distance|safe }}
+	var project_size = {{ project_size|safe }}
+	var completion_date = {{ completion_date|safe }}
+	var rate = {{ rate|safe }}
+
+	console.log(distance);
+	console.log(rate);
+	console.log(completion_date);
+	console.log(project_size);
+
+
+	$(document).ready(function () {
+		$("select[name='distancep2']").val(distance[0]);
+		$("select[name='distancep3']").val(distance[1]);
+		$("select[name='distancep4']").val(distance[2]);
+
+		$("select[name='ratep2']").val(rate[0]);
+		$("select[name='ratep3']").val(rate[1]);
+		$("select[name='ratep4']").val(rate[2]);
+
+		$("select[name='completion_datep2']").val(completion_date[0]);
+		$("select[name='completion_datep3']").val(completion_date[1]);
+		$("select[name='completion_datep4']").val(completion_date[2]);
+
+		$("select[name='project_sizep2']").val(project_size[0]);
+		$("select[name='project_sizep3']").val(project_size[1]);
+		$("select[name='project_sizep4']").val(project_size[2]);
+    });
+
+
+</script>
 <div class="form-group">
 	<form action="/add" method="post">
 		<div class = "table-responsive">

@@ -4,7 +4,7 @@ import json
 from app import db
 from app.models import Project
 
-data = json.load(open('projects.json'))
+data = json.load(open('projects_data.json'))
 
 for i in range(len(data["projects"])):
 	rate = data['projects'][i]['rate']
