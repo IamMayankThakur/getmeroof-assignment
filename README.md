@@ -1,4 +1,4 @@
-# Assignment for get a roof.
+# Assignment for getmeroof.com
 
 *  Click on "Update Priority" and define the priority for each attribute
 *  After clicking submit, proceed to the index page (you are automatically redirected)
